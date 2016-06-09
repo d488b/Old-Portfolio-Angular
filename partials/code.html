@@ -1,0 +1,78 @@
+<!-- Page Content -->
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h1 class="page-header">Javascript
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#/">Home</a>
+                </li>
+                <li class="active">Examples</li>
+            </ol>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <img class="img-responsive" src="http://placehold.it/1200x300">
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <h2 class="page-header">Javascript Pyramid</h2>
+            <div class="col-md-5">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <p class="pyramidText">How many rows would you like?</p> <input type="text" id="pyramidCols" placeholder=" Please enter a number"                              class="form-control">&nbsp;<button type="button" ng-click="pyramid()" class="btn btn-info">Submit</button>&nbsp;<button type="button" ng-click="reset()" class="btn btn-default">Reset</button>
+
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7 text-center pyramidText" id="pyramidOutput">
+            *Pyramid will output here
+            </div>
+        </div>
+
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="col-md-12">
+        <h2 class="page-header">Google Maps Javascript API</h2>
+
+        <div class="col-lg-12" style="height:500px;width: 100%;">
+            <div id="map"></div>
+        </div>
+        <script>
+            var map;
+            var myLatLng = {lat: 37.548271, lng: -121.988571};
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: myLatLng,
+                    zoom: 12
+                });
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                });
+
+            }
+        </script>
+        <!-- Google Maps Api -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv3-WdM2U7I6zpWEVHlH0Ub53mVPeEhGg&callback=initMap" async defer></script>
+        </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->

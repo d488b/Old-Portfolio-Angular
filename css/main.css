@@ -10,6 +10,13 @@ For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap
 
 html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
+    width:100%;
 }
 
 body {
@@ -21,11 +28,23 @@ body {
     cursor:pointer;
 }
 
+#contactSection {
+    margin-top: 10px;
+}
 
 .img-home-portfolio,
 .img-customer,
 .portfolio-item {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+}
+
+.skillName{
+    margin-bottom:10px;
+}
+
+.doc {
+    width: 100%;
+    height: 900px;
 }
 
 .tab-pane {
@@ -126,6 +145,15 @@ body {
     font-style: italic;
 }
 
+.pyramidText {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#pyramidOutput {
+    border: 1px dotted #d0ccc7;
+    min-height: 300px;
+    padding: 15px;
+}
 /* Footer Styles */
 footer {
     margin: 50px 0;

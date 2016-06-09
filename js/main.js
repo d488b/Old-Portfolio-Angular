@@ -1,9 +1,4 @@
 /**
- * AngularJS Tutorial 1
- * @author Nick Kaye <nick.c.kaye@gmail.com>
- */
-
-/**
  * Main AngularJS Web Application
  */
 var app = angular.module('tutorialWebApp', [
@@ -20,8 +15,8 @@ app.config(['$routeProvider', function ($routeProvider) {
     // Pages
     .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
     .when("/faq", {templateUrl: "partials/faq.html", controller: "PageCtrl"})
-    .when("/pricing", {templateUrl: "partials/pricing.html", controller: "PageCtrl"})
-    .when("/services", {templateUrl: "partials/services.html", controller: "PageCtrl"})
+    .when("/resume", {templateUrl: "partials/resume.html", controller: "PageCtrl"})
+    .when("/code", {templateUrl: "partials/code.html", controller: "PageCtrl"})
     .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
     // Blog
     .when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
@@ -41,8 +36,6 @@ app.controller('BlogCtrl', function (/* $scope, $location, $http */) {
  * Controls all other Pages
  */
 app.controller('PageCtrl', function ($scope/* $scope, $location, $http */) {
-  console.log("Page Controller reporting for duty.");
-
 
     // About Me Employer List
     $scope.employerList = [
@@ -65,8 +58,34 @@ app.controller('PageCtrl', function ($scope/* $scope, $location, $http */) {
     {name:'AngularJS',img:'http://placehold.it/500x300'}
     ];
 
+  // Pyramid Function
+  $scope.pyramid = function(number){
+    number = $('#pyramidCols').val();
+    $("#pyramidOutput").empty();
+    for(var i = 0; i < number; i++)
+    {
+      for(var x = 0; x <= i; x++)
+      {
+        $("#pyramidOutput").append("*");
+      }
+      $("#pyramidOutput").append("</br>");
+    }
+  };
+
+  $('#pyramidCols').keypress(function(event) {
+    if (event.keyCode == 13) {
+      $scope.pyramid();
+    }
+  });
+
+  $scope.reset = function(){
+    $('#pyramidCols').val('');
+    $("#pyramidOutput").empty();
+  }
+
   // Activates Tooltips for Social Links
   $('.tooltip-social').tooltip({
     selector: "a[data-toggle=tooltip]"
   })
 });
+
