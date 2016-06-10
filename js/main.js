@@ -81,7 +81,38 @@ app.controller('PageCtrl', function ($scope/* $scope, $location, $http */) {
   $scope.reset = function(){
     $('#pyramidCols').val('');
     $("#pyramidOutput").empty();
-  }
+  };
+
+  //Factorial Function
+  var num = $('#factorialInput').val();
+  $scope.factorial = function(num){
+
+    $("#factorialOutput").empty();
+    // If the number is less than 0, reject it.
+    if (num < 0) {
+      return -1;
+    }
+    // If the number is 0, its factorial is 1.
+    else if (num == 0) {
+      return 1;
+    }
+    // Otherwise, call this recursive procedure again.
+    else {
+      return (num * factorial(num - 1));
+      $("#factorialOutput").append(factorial(num));
+    }
+  };
+
+  $scope.reset2 = function(){
+    $('#factorialInput').val('');
+    $("#factorialOutput").empty();
+  };
+
+  $('#factorialInput').keypress(function(event) {
+    if (event.keyCode == 13) {
+      $scope.factorial();
+    }
+  });
 
   // Activates Tooltips for Social Links
   $('.tooltip-social').tooltip({
