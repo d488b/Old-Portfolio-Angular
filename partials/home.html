@@ -1,196 +1,75 @@
+<div class="container">
 
-<div id="myCarousel" class="carousel slide">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+    <div class="row">
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-        <div class="item active">
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Specialists');"></div>
-            <div class="carousel-caption">
-                <h1>Reduce costs of finishing operations by 65%</h1>
-            </div>
+        <div class="col-lg-12">
+            <h1 class="page-header">Welcome
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#/">Home</a>
+                </li>
+                <li class="active"></li>
+            </ol>
         </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Wordlwide');"></div>
-            <div class="carousel-caption">
-                <h1>International Buyer Financing Available</h1>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Since 1910');"></div>
-            <div class="carousel-caption">
-                <h1>Family Owned for Four Generations</h1>
-            </div>
-        </div>
+
     </div>
 
-    <!-- Controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="icon-prev"></span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="icon-next"></span>
-    </a>
-</div>
+    <div class="row">
 
-<div class="section">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-4 col-md-4">
-                <h3><i class="fa fa-check-circle"></i> Bootstrap 3 Built</h3>
-                <p>The 'Modern Business' website template by <a href="http://startbootstrap.com">Start Bootstrap</a> is built with <a href="http://getbootstrap.com">Bootstrap 3</a>. Make sure you're up to date with latest Bootstrap documentation!</p>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <h3><i class="fa fa-pencil"></i> Ready to Style &amp; Edit</h3>
-                <p>You're ready to go with this pre-built page structure, now all you need to do is add your own custom stylings! You can see some free themes over at <a href="http://bootswatch.com">Bootswatch</a>, or come up with your own using <a href="http://getbootstrap.com/customize/">the Bootstrap customizer</a>!</p>
-            </div>
-            <div class="col-lg-4 col-md-4">
-                <h3><i class="fa fa-folder-open"></i> Many Page Options</h3>
-                <p>This template features many common pages that you might see on a business website. Pages include: about, contact, portfolio variations, blog, pricing, FAQ, 404, services, and general multi-purpose pages.</p>
-            </div>
+        <div class="col-md-6">
+            <img class="img-responsive" src="imgs/me2.jpg">
         </div>
-        <!-- /.row -->
+        <div class="col-md-6">
+            <h2>Dan Basinki</h2>
+
+            <p>Hi, I am a Software Engineer / Front End Developer and this is my website.</p>
+
+            <p>Originally from Wilmette Illinois I moved to Las Vegas around the time I turned 21 to figure life out on my own. I lived there for 8 years and dealt poker for a living. A time came where I needed to make a career change. I decided to go back to school for computer science and the plan was to graduate from UNLV(University of Las Vegas Nevada) but along the way I came across an article talking about the rise in popularity of programming boot camps. I decided to move to the SF Bay Area and pursue my passion. The journey hasn't been easy but definitely rewarding.</p>
+
+            <ul class="list-unstyled list-inline list-social-icons">
+                <li class="tooltip-social facebook-link">
+                    <a href="https://www.facebook.com/d488b" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                </li>
+                <li class="tooltip-social linkedin-link"><a href="https://www.linkedin.com/in/dan-basinski-69a45a79" target="_blank" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                </li>
+                <li class="tooltip-social github-link"><a href="https://www.github.com/d488b" data-toggle="tooltip" data-placement="top" title="Github"><i class="fa fa-github-square fa-2x"></i></a>
+                </li>
+            </ul>
+        </div>
 
     </div>
-    <!-- /.container -->
 
-</div>
-<!-- /.section -->
+    <!-- Team Member Profiles -->
 
-<div class="section-colored text-center">
+    <div class="row">
 
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>Modern Business: A Clean &amp; Simple Full Website Template by Start Bootstrap</h2>
-                <p>A complete website design featuring various single page templates from Start Bootstraps library of free HTML starter templates.</p>
-                <hr>
-            </div>
+        <div class="col-lg-12">
+            <h2 class="page-header">Work History</h2>
         </div>
-        <!-- /.row -->
+
+        <div ng-repeat="item in employerList" class="col-sm-4">
+            <h3>{{item.company}}
+                <small>{{item.position}}</small>
+            </h3>
+            <p>{{item.location}}</p>
+        </div>
 
     </div>
-    <!-- /.container -->
 
-</div>
-<!-- /.section-colored -->
+    <!-- Our Customers -->
 
-<div class="section">
+    <div class="row">
 
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>Display Some Work on the Home Page Portfolio</h2>
-                <hr>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-home-portfolio" src="http://placehold.it/700x450">
-                </a>
-            </div>
+        <div class="col-lg-12">
+            <h2 class="page-header">My Skills</h2>
         </div>
-        <!-- /.row -->
+
+        <div ng-repeat="items in skillsList" class="col-md-3 col-sm-3 col-xs-3">
+            <img class="img-responsive img-customer" ng-src="{{items.img}}">
+            <p class="skillName">{{items.name}}</p>
+        </div>
 
     </div>
-    <!-- /.container -->
 
 </div>
-<!-- /.section -->
-
-<div class="section-colored">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <h2>Modern Business Features Include:</h2>
-                <ul>
-                    <li>Bootstrap 3 Framework</li>
-                    <li>Mobile Responsive Design</li>
-                    <li>Predefined File Paths</li>
-                    <li>Working PHP Contact Page</li>
-                    <li>Minimal Custom CSS Styles</li>
-                    <li>Unstyled: Add Your Own Style and Content!</li>
-                    <li>Font-Awesome fonts come pre-installed!</li>
-                    <li>100% <strong>Free</strong> to Use</li>
-                    <li>Open Source: Use for any project, private or commercial!</li>
-                </ul>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <img class="img-responsive" src="http://placehold.it/700x450/ffffff/cccccc">
-            </div>
-        </div>
-        <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.section-colored -->
-
-<div class="section">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <img class="img-responsive" src="http://placehold.it/700x450">
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <h2>Modern Business Features Include:</h2>
-                <ul>
-                    <li>Bootstrap 3 Framework</li>
-                    <li>Mobile Responsive Design</li>
-                    <li>Predefined File Paths</li>
-                    <li>Working PHP Contact Page</li>
-                    <li>Minimal Custom CSS Styles</li>
-                    <li>Unstyled: Add Your Own Style and Content!</li>
-                    <li>Font-Awesome fonts come pre-installed!</li>
-                    <li>100% <strong>Free</strong> to Use</li>
-                    <li>Open Source: Use for any project, private or commercial!</li>
-                </ul>
-            </div>
-        </div>
-        <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.section -->
-
-
+<!-- /.container -->

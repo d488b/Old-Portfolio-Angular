@@ -49,13 +49,13 @@ app.controller('PageCtrl', function ($scope/* $scope, $location, $http */) {
 
   // About - My  Skills List
     $scope.skillsList = [
-    {name:'HTML',img:'http://placehold.it/500x300'},
-    {name:'CSS',img:'http://placehold.it/500x300'},
-    {name:'Bootstrap',img:'http://placehold.it/500x300'},
-    {name:'JavaScript',img:'http://placehold.it/500x300'},
-    {name:'jQuery',img:'http://placehold.it/500x300'},
-    {name:'Apache Velocity',img:'http://placehold.it/500x300'},
-    {name:'AngularJS',img:'http://placehold.it/500x300'}
+    {name:'HTML',img:'imgs/html5.png'},
+    {name:'CSS',img:'imgs/css3.png'},
+    {name:'Bootstrap',img:'imgs/bootstrap-logo.png'},
+    {name:'JavaScript',img:'imgs/js.png'},
+    {name:'jQuery',img:'imgs/jquery-logo.jpg'},
+    {name:'Apache Velocity',img:'imgs/apache.jpg'},
+    {name:'AngularJS',img:'imgs/angular.jpg'}
     ];
 
   // Pyramid Function
