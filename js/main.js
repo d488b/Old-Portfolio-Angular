@@ -1,6 +1,3 @@
-/**
- * Main AngularJS Web Application
- */
 var app = angular.module('tutorialWebApp', [
   'ngRoute'
 ]);
@@ -13,11 +10,8 @@ app.config(['$routeProvider', function ($routeProvider) {
     // Home
     .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
     // Pages
-    .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
-    .when("/faq", {templateUrl: "partials/faq.html", controller: "PageCtrl"})
     .when("/resume", {templateUrl: "partials/resume.html", controller: "PageCtrl"})
     .when("/code", {templateUrl: "partials/code.html", controller: "PageCtrl"})
-    .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
     // Blog
     .when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
     .when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
@@ -87,7 +81,7 @@ app.controller('PageCtrl', function ($scope/* $scope, $location, $http */) {
   $scope.factorial = function()
   {
     var x = document.getElementById("factorialInput").value;
-    document.getElementById("factorialOutput").innerHTML="The Factorial of " + x + " is<br> " + fact(x);
+    document.getElementById("factorialOutput").innerHTML="The factorial of " + x + " is<br> " + fact(x);
   }
 
   function fact(x)

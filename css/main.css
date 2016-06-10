@@ -12,6 +12,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    color:white;
 }
 
 #map {
@@ -19,9 +20,24 @@ html, body {
     width:100%;
 }
 
+.h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small { color:#ff3f00 }
+
+a, a:focus, a:hover {color:#ff3f00 }
+
+.navbar-default .navbar-brand { color: black;}
+.navbar-default .navbar-nav>li>a { color: black;}
+.breadcrumb>.active { color:white;}
+.breadcrumb { background-color: transparent}
+
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('../imgs/bg.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed
 }
 
 .dropdown {
