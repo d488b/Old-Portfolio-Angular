@@ -84,24 +84,19 @@ app.controller('PageCtrl', function ($scope/* $scope, $location, $http */) {
   };
 
   //Factorial Function
-  var num = $('#factorialInput').val();
-  $scope.factorial = function(num){
+  $scope.factorial = function()
+  {
+    var x = document.getElementById("factorialInput").value;
+    document.getElementById("factorialOutput").innerHTML="The Factorial of " + x + " is<br> " + fact(x);
+  }
 
-    $("#factorialOutput").empty();
-    // If the number is less than 0, reject it.
-    if (num < 0) {
-      return -1;
-    }
-    // If the number is 0, its factorial is 1.
-    else if (num == 0) {
-      return 1;
-    }
-    // Otherwise, call this recursive procedure again.
-    else {
-      return (num * factorial(num - 1));
-      $("#factorialOutput").append(factorial(num));
-    }
-  };
+  function fact(x)
+  {
+    if (x==1 || x==0)
+    {return 1;}
+    else
+    {return x*fact(x-1);}
+  }
 
   $scope.reset2 = function(){
     $('#factorialInput').val('');
