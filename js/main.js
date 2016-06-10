@@ -23,7 +23,7 @@ app.config(['$routeProvider', function ($routeProvider) {
  * Controls the Blog
  */
 app.controller('BlogCtrl', function (/* $scope, $location, $http */) {
-  console.log("Blog Controller reporting for duty.");
+
 });
 
 /**
@@ -107,5 +107,18 @@ app.controller('PageCtrl', function ($scope/* $scope, $location, $http */) {
   $('.tooltip-social').tooltip({
     selector: "a[data-toggle=tooltip]"
   })
+});
+
+  // Nav Close on click
+
+$(document).ready(function() {
+
+  $("body").click(function(event) {
+    // only do this if navigation is visible, otherwise you see jump in navigation while collapse() is called
+    if ($(".navbar-collapse").is(":visible") && $(".navbar-toggle").is(":visible") ) {
+      $('.navbar-collapse').collapse('toggle');
+    }
+  });
+
 });
 

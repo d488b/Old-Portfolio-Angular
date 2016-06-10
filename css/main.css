@@ -24,8 +24,10 @@ html, body {
 
 a, a:focus, a:hover {color:#ff3f00 }
 
-.navbar-default .navbar-brand { color: black;}
+.navbar-default .navbar-brand { color: black}
 .navbar-default .navbar-nav>li>a { color: black;}
+.navbar-default:hover .navbar-nav>li>a:hover { color: black;background-color: #dcdcdc}
+.navbar-default:hover .navbar-brand:hover { color: black;background-color: #dcdcdc}
 .breadcrumb>.active { color:white;}
 .breadcrumb { background-color: transparent}
 
