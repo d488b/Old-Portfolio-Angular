@@ -47,11 +47,12 @@
             <h2 class="page-header">Work History</h2>
         </div>
 
-        <div ng-repeat="item in employerList" class="col-sm-4">
+        <div ng-repeat="item in employerList" class="col-sm-4" id="workBox">
             <h3>{{item.company}}
                 <small>{{item.position}}</small>
             </h3>
             <p>{{item.location}}</p>
+            <p>{{item.date}}</p>
         </div>
 
     </div>

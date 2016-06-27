@@ -33,12 +33,12 @@ app.controller('PageCtrl', function ($scope/* $scope, $location, $http */) {
 
     // About Me Employer List
     $scope.employerList = [
-    {company:'Upward.net',position:'Software Engineer',location:'7979 Gateway Blvd. Suite 110. Newark, California 94560',img:'http://placehold.it/500x300'},
-    {company:'Postmob App',position:'Web Developer',location:'San Francisco, CA',img:'http://placehold.it/500x300'},
-    {company:'MGM Mirage',position:'Poker Dealer',location:'Las Vegas, NV',img:'http://placehold.it/500x300'},
-    {company:'Treasue Island',position:'Poker Dealer',location:'Las Vegas, NV',img:'http://placehold.it/500x300'},
-    {company:'WSOP',position:'Poker Dealer',location:'Las Vegas, NV',img:'http://placehold.it/500x300'},
-    {company:'Viprofix',position:'Data Entry Specialist',location:'Chicago, IL',img:'http://placehold.it/500x300'}
+    {company:'Upward.net',position:'Software Engineer',location:'7979 Gateway Blvd. Suite 110. Newark, California 94560', date:'01/15 - Current'},
+    {company:'Postmob App',position:'Web Developer',location:'San Francisco, CA',date:'08/14 - 02/15'},
+    {company:'MGM Mirage',position:'Poker Dealer',location:'Las Vegas, NV',date:"'05 - '12"},
+    {company:'Treasue Island',position:'Poker Dealer',location:'Las Vegas, NV',date:"'05 - '12"},
+    {company:'WSOP',position:'Poker Dealer',location:'Las Vegas, NV',date:"'05 - '12"},
+    {company:'Viprofix',position:'Data Entry Specialist',location:'Chicago, IL',date:'06/02-08/02'}
   ];
 
   // About - My  Skills List
