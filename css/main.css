@@ -81,6 +81,10 @@ body {
     border-radius: 5px;
 }
 
+#resumeLink:hover {
+    color:white;
+    border: 1px solid white;
+}
 .tab-pane {
     margin-top: 15px;
 }
