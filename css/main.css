@@ -21,14 +21,16 @@ html, body {
     color: black;
 }
 
-.h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small { color:#ff3f00 }
+.h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small { color:#2fc8e8 }
 
-a, a:focus, a:hover {color:#ff3f00 }
+a, a:focus, a:hover {color:#2fc8e8 }
 
 .navbar-default .navbar-brand { color: black}
 .navbar-default .navbar-nav>li>a { color: black;}
 .navbar-default:hover .navbar-nav>li>a:hover { color: black;background-color: #dcdcdc}
 .navbar-default:hover .navbar-brand:hover { color: black;background-color: #dcdcdc}
+.navbar-inverse .navbar-nav>li>a { color: #2fc8e8 }
+.navbar-inverse .navbar-brand { color: #2fc8e8 }
 .breadcrumb>.active { color:white;}
 .breadcrumb { background-color: transparent}
 
@@ -67,6 +69,22 @@ body {
     height: 900px;
 }
 
+#resumeButtonContainer{
+    margin-bottom: 40px;
+}
+
+#resumeLink{
+    text-decoration: underline;
+    font-weight: bold;
+    border: 1px solid #2fc8e8;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#resumeLink:hover {
+    color:white;
+    border: 1px solid white;
+}
 .tab-pane {
     margin-top: 15px;
 }
@@ -92,6 +110,12 @@ body {
     border: 1px solid #cccccc;
 }
 
+.ui-datepicker-calendar{
+    background-color:white;
+}
+#datepicker{
+    color: #2fc8e8;
+}
 /* Half Page Height Carousel Customization */
 .carousel {
     height: 50%;
