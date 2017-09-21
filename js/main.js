@@ -12,6 +12,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     // Pages
     .when("/resume", {templateUrl: "partials/resume.html", controller: "PageCtrl"})
     .when("/code", {templateUrl: "partials/code.html", controller: "PageCtrl"})
+    .when("/weather", {templateUrl: "partials/weather.html", controller: "PageCtrl"})
     // Blog
     .when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
     .when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
@@ -30,6 +31,19 @@ app.controller('BlogCtrl', function (/* $scope, $location, $http */) {
  * Controls all other Pages
  */
 app.controller('PageCtrl', function ($scope/* $scope, $location, $http */) {
+
+    // Weather Api Celcius to Fahrenheit
+    $scope.changeWeather = function(){
+        var currentTempUnit = $("#tempunit").text();
+        var newTempUnit = currentTempUnit == "C" ? "F" : "C";
+        $("#tempunit").text(newTempUnit);
+        if (newTempUnit == "F") {
+            var fahTemp = Math.round(parseInt($("#temp").text()) * 9 / 5 + 32);
+            $("#temp").text(fahTemp + " " + String.fromCharCode(176));
+        } else {
+            $("#temp").text(currentTempInCelsius + " " + String.fromCharCode(176));
+        }
+    }
 
     // About Me Employer List
     $scope.employerList = [
@@ -121,4 +135,72 @@ $(document).ready(function() {
   });
 
 });
+
+
+    // Weather Api script
+
+var api = "https://fcc-weather-api.glitch.me/api/current?";
+var lat, lon;
+var tempUnit = 'C';
+var currentTempInCelsius;
+
+$( document ).ready(function(){
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var lat = "lat=" + position.coords.latitude;
+            var lon = "lon=" + position.coords.longitude;
+            getWeather(lat, lon);
+        });
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
+
+
+});
+
+function getWeather(lat, lon) {
+    var urlString = api + lat + "&" + lon;
+    $.ajax({
+        url: urlString, success: function (result) {
+            $("#city").text(result.name + ", ");
+            $("#country").text(result.sys.country);
+            currentTempInCelsius = Math.round(result.main.temp * 10) / 10;
+            $("#temp").text(currentTempInCelsius + " " + String.fromCharCode(176));
+            $("#tempunit").text(tempUnit);
+            $("#desc").text(result.weather[0].main);
+            IconGen(result.weather[0].main);
+            console.log("test");
+        }
+    });
+}
+
+function IconGen(desc) {
+    var desc = desc.toLowerCase();
+    switch (desc) {
+        case 'drizzle':
+            addIcon(desc);
+            break;
+        case 'clouds':
+            addIcon(desc);
+            break;
+        case 'rain':
+            addIcon(desc);
+            break;
+        case 'snow':
+            addIcon(desc);
+            break;
+        case 'clear':
+            addIcon(desc);
+            break;
+        case 'thunderstom':
+            addIcon(desc);
+            break;
+        default:
+            $('div.clouds').removeClass('hide');
+    }
+}
+
+function addIcon(desc) {
+    $('div.' + desc).removeClass('hide');
+}
 

@@ -1,0 +1,69 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h1 class="page-header">Weather Api
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#/">Home</a>
+                </li>
+                <li class="active">Weather Api</li>
+            </ol>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="row">
+            <header class="col-xs-12 text-center">
+                <h1>We<i class="wi wi-hail"></i>ther App</h1>
+            </header>
+
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="text-center status">
+                    <p>Your Location: <span id="city"></span> <span id="country"></span></p>
+                    <p ng-click="changeWeather();">Current Temp: <span id="temp"></span><span class="temp" id="tempunit" ></span></p>
+                    <p id="desc"></p>
+                </div>
+
+                <div class="text-center all-icon">
+                    <div class="icon sun-shower hide">
+                        <div class="cloud"></div>
+                        <div class="sun">
+                            <div class="rays"></div>
+                        </div>
+                        <div class="rain"></div>
+                    </div>
+                    <div class="icon thunder-storm hide thunderstom">
+                        <div class="cloud"></div>
+                        <div class="lightning">
+                            <div class="bolt"></div>
+                            <div class="bolt"></div>
+                        </div>
+                    </div>
+                    <div class="icon cloudy hide clouds">
+                        <div class="cloud"></div>
+                        <div class="cloud"></div>
+                    </div>
+                    <div class="icon flurries hide snow">
+                        <div class="cloud"></div>
+                        <div class="snow">
+                            <div class="flake"></div>
+                            <div class="flake"></div>
+                        </div>
+                    </div>
+                    <div class="icon sunny hide clear">
+                        <div class="sun">
+                            <div class="rays"></div>
+                        </div>
+                    </div>
+                    <div class="icon rainy hide rain">
+                        <div class="cloud"></div>
+                        <div class="rain"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
