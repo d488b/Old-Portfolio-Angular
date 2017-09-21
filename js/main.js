@@ -169,7 +169,6 @@ function getWeather(lat, lon) {
             $("#tempunit").text(tempUnit);
             $("#desc").text(result.weather[0].main);
             IconGen(result.weather[0].main);
-            console.log("test");
         }
     });
 }
