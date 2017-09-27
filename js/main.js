@@ -13,18 +13,20 @@ app.config(['$routeProvider', function ($routeProvider) {
     .when("/resume", {templateUrl: "partials/resume.html", controller: "PageCtrl"})
     .when("/code", {templateUrl: "partials/code.html", controller: "PageCtrl"})
     .when("/weather", {templateUrl: "partials/weather.html", controller: "PageCtrl"})
+    // Dice
+    .when("/dice", {templateUrl: "partials/dice.html", controller: "DiceCtrl"})
     // Blog
-    .when("/blog", {templateUrl: "partials/blog.html", controller: "BlogCtrl"})
-    .when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "BlogCtrl"})
-    .when("/blog/post2", {templateUrl: "partials/blog_item2.html", controller: "BlogCtrl"})
+    .when("/blog", {templateUrl: "partials/blog.html", controller: "PageCtrl"})
+    .when("/blog/post", {templateUrl: "partials/blog_item.html", controller: "PageCtrl"})
+    .when("/blog/post2", {templateUrl: "partials/blog_item2.html", controller: "PageCtrl"})
     // else 404
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
 
 /**
- * Controls the Blog
+ * Controls the Dice Game
  */
-app.controller('BlogCtrl', function (/* $scope, $location, $http */) {
+app.controller('DiceCtrl', function (/* $scope, $location, $http */) {
 
 });
 
